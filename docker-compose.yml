@@ -1,0 +1,14 @@
+version: "3"
+services:
+  mysql:
+    image: mysql/mysql-server:5.7
+    container_name: api_spring_mysql
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: api_spring_mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+    volumes:
+      - ./temp/mysql:/var/lib/mysql
